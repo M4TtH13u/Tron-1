@@ -13,7 +13,13 @@
  */
 int main(int argc, char** argv) {
 
-   std::cout << "Hello world" << std::endl;
+   char continuer = 'N';
+   
+   std::cout << "Tron" << std::endl;
+   do {
+      std::cout << "Continuer (O/N)" << std::endl;
+      std::cin >> continuer;
+   } while(continuer != 'N');
    
    return EXIT_SUCCESS;
 }
