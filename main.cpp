@@ -11,16 +11,33 @@
 /*
  * 
  */
-int main(int argc, char** argv) {//test
+int main(int argc, char** argv) {
 
-   char continuer = 'N';
-   
-   std::cout << "Tron" << std::endl;
+   unsigned int choix;
+
+   //Menu principal
    do {
-      std::cout << "Continuer (O/N)" << std::endl;
-      std::cin >> continuer;
-   } while(continuer != 'N');
-   
+      std::cout << "Tron" << std::endl << std::endl;
+      std::cout << "1 - Nouvelle partie" << std::endl;
+      std::cout << "2 - Configuration" << std::endl;
+      std::cout << "3 - Quitter" << std::endl;
+      std::cin >> choix;
+
+      switch (choix) {
+         case 1:
+            //Nouvelle partie
+            std::cout << "Nouvelle partie" << std::endl;
+            break;
+         case 2:
+            //Configuration
+            std::cout << "Configuration" << std::endl;
+            break;
+         default:
+            continue;
+            break;
+      }
+   } while (choix != 3);
+
    return EXIT_SUCCESS;
 }
 
